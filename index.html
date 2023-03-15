@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div class="container">
+        <div class="text-center">
+            <button id="Dark" class="btn bg-darkb mx-2">Dark</button>
+            <button id="white" class="btn bg-white mx-2">White</button>
+            <button id="green" class="btn bg-green mx-2">Green</button>
+            <button id="blue" class="btn bg-blue mx-2">Blue</button>
+            <button id="purple" class="btn bg-purple mx-2">Purple</button>
+            <button id="lightBlue" class="btn bg-lightblue mx-2">LightBlue</button>
+            <button id="orange" class="btn bg-orange mx-2">Orange</button>
+            <button id="yellow" class="btn bg-yellow mx-2">Yellow</button>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="randomPinField" class="form-control" type="text">
+                    <button onclick="generatePin()" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="displayCalculate" class="form-control" type="text">
+                    <div class="numbers">
+                        <div id="calculate" class="calc-body">
+                            <div class="calc-button-row">
+                              <div class="button">7</div>
+                              <div class="button">8</div>
+                              <div class="button">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button">4</div>
+                              <div class="button">5</div>
+                              <div class="button">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button">1</div>
+                              <div class="button">2</div>
+                              <div class="button">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button">&lt;</div>
+                                <div class="button">0</div>
+                                <div class="button">C</div>
+                            </div>
+                            <div>
+                                <button onclick="matchNumber()" type="submit" class="submit-btn">Submit</button>
+                                <p id="tryText" class="action-left">2 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notify-section">
+            <p id="No-Massage" class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p id="Yes-Massage" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
